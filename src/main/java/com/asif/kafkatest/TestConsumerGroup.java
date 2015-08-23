@@ -77,7 +77,7 @@ public class TestConsumerGroup {
         String zooKeeper = "localhost:2181";
         String groupId = "asif";
         String topic = "testTopic";
-        int threads = 1;
+        int threads = 3;
  
         TestConsumerGroup example = new TestConsumerGroup(zooKeeper, groupId, topic);
         example.run(threads);

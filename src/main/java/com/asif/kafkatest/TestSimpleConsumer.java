@@ -22,12 +22,17 @@ public class TestSimpleConsumer {
 	
     public static void main(String args[]) {
     	TestSimpleConsumer consumer = new TestSimpleConsumer();
-        long maxReads = Long.parseLong(args[0]);
-        String topic = args[1];
-        int partition = Integer.parseInt(args[2]);
+        //long maxReads = Long.parseLong(args[0]);
+        long maxReads = 100;
+        //String topic = args[1];
+        String topic = "testTopic";
+        //int partition = Integer.parseInt(args[2]);
+        int partition = 0;
         List<String> seeds = new ArrayList<String>();
-        seeds.add(args[3]);
-        int port = Integer.parseInt(args[4]);
+        //seeds.add(args[3]);
+        seeds.add("localhost");
+        //int port = Integer.parseInt(args[4]);
+        int port = 9092;
         try {
             consumer.run(maxReads, topic, partition, seeds, port);
         } 
